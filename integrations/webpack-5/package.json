@@ -21,7 +21,7 @@
     }
   },
   "devDependencies": {
-    "css-loader": "^6.7.3",
+    "css-loader": "^7.0.0",
     "mini-css-extract-plugin": "^2.7.5",
     "postcss-loader": "^7.2.4",
     "webpack": "^5.80.0",
