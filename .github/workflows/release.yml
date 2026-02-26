@@ -82,7 +82,7 @@ jobs:
         run: ${{ matrix.strip }} ${{ env.OXIDE_LOCATION }}/*.node
 
       - name: Upload artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v7
         with:
           name: bindings-${{ matrix.target }}
           path: |
@@ -146,7 +146,7 @@ jobs:
         run: strip -x ${{ env.OXIDE_LOCATION }}/*.node
 
       - name: Upload artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v7
         with:
           name: bindings-aarch64-apple-darwin
           path: |
@@ -237,7 +237,7 @@ jobs:
         run: ${{ matrix.strip }} ${{ env.OXIDE_LOCATION }}/*.node
 
       - name: Upload artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v7
         with:
           name: bindings-${{ matrix.target }}
           path: |
@@ -293,7 +293,7 @@ jobs:
           echo "VERSION=$(node -e 'console.log(require(`./package.json`).version);')" >> $GITHUB_ENV
 
       - name: Download artifacts
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v8
         with:
           path: ${{ env.OXIDE_LOCATION }}
 
